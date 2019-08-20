@@ -61,9 +61,12 @@ namespace WebApplication3.Controllers
                     }
                 };
 
-                const string apiKey = "T893tLpoAA/o4ccS5hUvFCHpwTVacYU+M9YkCKZ4p6VsQvomRZZX8l7TOGvm1Jdx7lT08J9sX6RA/wuaKmT1/Q=="; // Replace this with the API key for the web service
+             //   const string apiKey = "T893tLpoAA/o4ccS5hUvFCHpwTVacYU+M9YkCKZ4p6VsQvomRZZX8l7TOGvm1Jdx7lT08J9sX6RA/wuaKmT1/Q=="; // Replace this with the API key for the web service
+                const string apiKey = "5qxQlmT9mv7uIbauFCdJLKap5efc2col"; // Replace this with the API key for the web service
+             
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
-                client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/subscriptions/55de3f089bfd4719922fb7abc02a2a95/services/3dd759043e1449948b2d67a3b6494eab/execute?api-version=2.0&format=swagger");
+                //client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/subscriptions/55de3f089bfd4719922fb7abc02a2a95/services/3dd759043e1449948b2d67a3b6494eab/execute?api-version=2.0&format=swagger");
+                client.BaseAddress = new Uri("http://3b69e51a-d8ef-4ca0-912a-a65096bf13f6.eastus.azurecontainer.io/score");
 
                 // WARNING: The 'await' statement below can result in a deadlock
                 // if you are calling this code from the UI thread of an ASP.Net application.
